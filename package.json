@@ -1,0 +1,24 @@
+{
+  "name": "diverso-gaming-platform-services",
+  "version": "1.0.0",
+  "description": "The Back-end of Diverso gaming platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diverso-digitech/diverso-gaming-platform-services.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diverso-digitech/diverso-gaming-platform-services/issues"
+  },
+  "homepage": "https://github.com/Diverso-digitech/diverso-gaming-platform-services#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
