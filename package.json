@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/Diverso-digitech/diverso-gaming-platform-services#readme",
   "dependencies": {
-    "express": "^4.17.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
     "mongoose": "^6.2.2"
   }
 }
