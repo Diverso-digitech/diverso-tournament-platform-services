@@ -1,0 +1,1 @@
+export const dbString = 'mongodb://localhost:27017/diverso'
