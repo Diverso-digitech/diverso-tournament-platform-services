@@ -1,8 +1,13 @@
 import express from "express";
 import { registerUser } from "../services/index.js";
+import { MiddlewareClass } from "../middleware/auth-middleware.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/register', (req,res) => registerUser(req, res))
+const Middleware = new MiddlewareClass();
 
-export default router
+router.post("/register", Middleware.decodeToken, (req, res) =>
+  registerUser(req, res)
+);
+
+export default router;
