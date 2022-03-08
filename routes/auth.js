@@ -1,13 +1,22 @@
-import express from "express";
-import { registerUser } from "../services/index.js";
+import { Router } from "express";
+import { registerUser, logoutUser } from "../services/index.js";
 import { MiddlewareClass } from "../middleware/auth-middleware.js";
+import { formatResponse } from "../utils/common.js";
 
-const router = express.Router();
+const authRoutes = Router();
 
 const Middleware = new MiddlewareClass();
 
-router.post("/register", Middleware.decodeToken, (req, res) =>
-  registerUser(req, res)
-);
+authRoutes.post("/register", (req, res) => {
+  registerUser(req, res);
+});
 
-export default router;
+authRoutes.get("/logout", (req, res) => {
+  logoutUser(req, res);
+});
+
+authRoutes.get("/secret", Middleware.requireAuth, (req, res) => {
+  formatResponse(res, 200, { secret: "12121212" }, false);
+});
+
+export default authRoutes;
