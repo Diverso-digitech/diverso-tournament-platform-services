@@ -10,7 +10,6 @@ class MiddlewareClass {
     const token = req.cookies[NAMES.JWT_COOKIE];
     if (token) {
       jwt.verify(token, AUTH_SECRET, (err, decodedToken) => {
-        console.log(err);
         if (err) {
           formatResponse(res, 501, {}, true, MESSAGES.NOT_AUTHORIZED);
         } else {
@@ -40,6 +39,25 @@ class MiddlewareClass {
     } else {
       res.locals.user = null;
       next();
+    }
+  };
+
+  verifyFirebaseToken = async (req, res, next) => {
+    const { ftoken } = req.body;
+    if (!ftoken) {
+      formatResponse(res, 501, {}, true, MESSAGES.NO_FIREBASE_TOKEN_FOUND);
+    }
+
+    try {
+      const decodeValue = await admin.auth().verifyIdToken(ftoken);
+      if (decodeValue) {
+        req.body.mobile = decodeValue.phone_number;
+        next();
+        return;
+      }
+      formatResponse(res, 501, {}, true, MESSAGES.NOT_AUTHORIZED);
+    } catch (e) {
+      formatResponse(res, 501, {}, true, MESSAGES.SERVER_ERROR);
     }
   };
 }
