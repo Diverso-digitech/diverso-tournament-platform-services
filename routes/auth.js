@@ -7,7 +7,7 @@ const authRoutes = Router();
 
 const Middleware = new MiddlewareClass();
 
-authRoutes.post("/register", (req, res) => {
+authRoutes.post("/register", Middleware.verifyFirebaseToken, (req, res) => {
   registerUser(req, res);
 });
 
