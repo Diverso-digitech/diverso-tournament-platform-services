@@ -1,18 +1,11 @@
 import { Users } from "../models/index.js";
 import { formatResponse } from "../utils/common.js";
-import jwt from "jsonwebtoken";
-import { AUTH_SECRET } from "../env.js";
 import { JWT_MAX_AGE, MESSAGES, NAMES } from "../constants/messages.js";
-
-const createToken = (id) => {
-  return jwt.sign({ id }, AUTH_SECRET, {
-    expiresIn: JWT_MAX_AGE,
-  });
-};
+import { createToken } from "../utils/jwt.js";
 
 async function registerUser(req, res) {
   try {
-    const { mobile } = req?.body;
+    const { mobile, ftoken } = req?.body;
     if (!mobile) {
       formatResponse(res, 501, {}, true, MESSAGES.REQUIRED_DATA);
     }
@@ -24,6 +17,7 @@ async function registerUser(req, res) {
     if (!user) {
       const newUserObject = {
         mobile,
+        ftoken,
         joiningDate: new Date(),
       };
       const NewUserDocument = new Users(newUserObject);
