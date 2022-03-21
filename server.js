@@ -4,6 +4,7 @@ import authRoutes from "./routes/auth.js";
 import cors from "cors";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import regFormRoutes from "./routes/reg-form.js";
 
 const corsOptions = {
   origin: true,
@@ -18,6 +19,8 @@ app.use(bodyParser.json());
 app.use(express.json()); // support json encoded bodies
 
 app.use(authRoutes);
+app.use(regFormRoutes);
+
 // quick checkup route
 app.get("/", (req, res) => {
   res.send({ message: "App is running fine" });
