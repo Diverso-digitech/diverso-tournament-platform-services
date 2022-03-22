@@ -30,9 +30,16 @@ async function registerUser(req, res) {
       maxAge: JWT_MAX_AGE,
     });
 
-   return formatResponse(res, 200, { ...user, token }, false, MESSAGES.SUCCESS);
+    return formatResponse(
+      res,
+      200,
+      { ...user, token },
+      false,
+      MESSAGES.SUCCESS
+    );
   } catch (err) {
-   return formatResponse(res, 501, {}, true, MESSAGES.SERVER_ERROR);
+    console.log(err);
+    return formatResponse(res, 501, {}, true, MESSAGES.SERVER_ERROR);
   }
 }
 
