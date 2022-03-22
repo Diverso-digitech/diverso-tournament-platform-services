@@ -8,7 +8,9 @@ import { createToken } from "../utils/jwt.js";
 
 class MiddlewareClass {
   requireAuth = (req, res, next) => {
-    const token = req.cookies[NAMES.JWT_COOKIE];
+    // const token = req.cookies[NAMES.JWT_COOKIE];
+    const token = req.headers["authorization"].split(" ")[1];
+
     if (token) {
       jwt.verify(token, AUTH_SECRET, (err, decodedToken) => {
         if (err) {
@@ -22,13 +24,15 @@ class MiddlewareClass {
         }
       });
     } else {
-      this.renewJWT(req, res, next);
+      formatResponse(res, 501, {}, true, MESSAGES.NOT_AUTHORIZED);
     }
   };
 
   // check current user
   checkUser = (req, res, next) => {
-    const token = req.cookies[NAMES.JWT_COOKIE];
+    // const token = req.cookies[NAMES.JWT_COOKIE];
+
+    const token = req.headers["authorization"].split(" ")[1];
 
     if (token) {
       jwt.verify(token, AUTH_SECRET, async (err, decodedToken) => {
