@@ -20,10 +20,12 @@ export const regFormGenerator = (details) => {
 
   schema["steps"] = Array.apply(null, Array(len)).map(() => "");
   schema["fieldsSchema"] = details.map((page) => {
-    return page.map((inp, idx) => {
-      const { label, regexType, errorMsg } = inp;
-      return getInputObject(idx, label, regexType, errorMsg);
-    });
+    return {
+      fields: page.map((inp, idx) => {
+        const { label, regexType, errorMsg } = inp;
+        return getInputObject(idx, label, regexType, errorMsg);
+      }),
+    };
   });
 
   return schema;
