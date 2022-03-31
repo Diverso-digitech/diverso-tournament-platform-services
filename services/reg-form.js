@@ -5,4 +5,8 @@ function registrationForm(req, res) {
   formatResponse(res, 200, regFormGenerator(formSchema), false);
 }
 
-export { registrationForm };
+function registrationFormPostReq(req, res) {
+  formatResponse(res, 200, {}, false);
+}
+
+export { registrationForm, registrationFormPostReq };
