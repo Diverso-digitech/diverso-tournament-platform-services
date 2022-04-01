@@ -5,7 +5,7 @@ const Types = Schema.Types;
 
 const registrationSchema = new Schema({
   tournamentId: { type: Types.String, trim: true, required: true },
-  data: { type: Types.Date, required: true },
+  formInpData: [],
 });
 
 export const Register = mongoose.model(

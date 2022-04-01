@@ -12,7 +12,7 @@ const Middleware = new MiddlewareClass();
 regFormRoutes.get(API.REG_FORM, Middleware.requireAuth, (req, res) => {
   registrationForm(req, res);
 });
-regFormRoutes.post(API.REG_FORM, Middleware.requireAuth, (req, res) => {
+regFormRoutes.post(API.REG_FORM, (req, res) => {
   registrationFormPostReq(req, res);
 });
 
