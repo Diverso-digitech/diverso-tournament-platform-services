@@ -5,9 +5,16 @@ import { AUTH_SECRET } from "../env.js";
 import { formatResponse } from "../utils/common.js";
 import { MESSAGES, NAMES } from "../constants/messages.js";
 import { createToken } from "../utils/jwt.js";
-
+import { isProtectedRoute } from "../utils/filterRoutes.js";
 class MiddlewareClass {
   requireAuth = (req, res, next) => {
+    //check public or protected route
+    const route = req.path;
+    const isProtected = isProtectedRoute(route);
+    if (!isProtected) {
+      next();
+    }
+
     // const token = req.cookies[NAMES.JWT_COOKIE];
     const token = req.headers["authorization"].split(" ")[1];
 

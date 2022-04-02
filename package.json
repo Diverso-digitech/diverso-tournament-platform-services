@@ -27,6 +27,7 @@
     "firebase": "^9.6.8",
     "firebase-admin": "^10.0.2",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.4.1",
     "mongoose": "^6.2.2"
   }
 }
