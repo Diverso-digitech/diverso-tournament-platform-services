@@ -1,12 +1,14 @@
 import { defaultItems } from "./constants/homepageConstants.js";
 
-export const homepageSchemaGenerator = (items, numberOfElements = 10) => {
+export const homepageSchemaGenerator = (items) => {
   return {
     schema: {
-      sections: items.map(({ heading, type }) => ({
+      sections: items.map(({ id, heading, type, props, data }) => ({
+        id,
         heading,
         type,
-        data: Array.from(new Array(numberOfElements), () => ({})),
+        props,
+        data,
       })),
     },
   };
