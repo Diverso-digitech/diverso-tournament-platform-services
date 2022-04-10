@@ -9,3 +9,10 @@ export const API = {
   PRIVATE_CONFIG: "/private-config",
   ENDPOINTS_CONFIG: "/endpoints-config",
 };
+
+export const ADMIN_APIS = {
+  SIGNUP: "/signup",
+  LOGIN: "/login",
+  LOGOUT: "/logout",
+  CREATE_TOURNAMENT: "/create-tournament",
+};
