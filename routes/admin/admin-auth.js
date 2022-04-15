@@ -8,8 +8,14 @@ import {
 
 const adminAuthRoutes = Router();
 
-adminAuthRoutes.post(ADMIN_APIS.SIGNUP, (req, res) => adminSignup(req, res));
-adminAuthRoutes.post(ADMIN_APIS.LOGIN, (req, res) => adminLogin(req, res));
-adminAuthRoutes.post(ADMIN_APIS.LOGOUT, (req, res) => adminLogout(req, res));
+adminAuthRoutes.post(ADMIN_APIS.ADMIN_SIGNUP, (req, res) =>
+  adminSignup(req, res)
+);
+adminAuthRoutes.post(ADMIN_APIS.ADMIN_LOGIN, (req, res) =>
+  adminLogin(req, res)
+);
+adminAuthRoutes.post(ADMIN_APIS.ADMIN_LOGOUT, (req, res) =>
+  adminLogout(req, res)
+);
 
 export default adminAuthRoutes;

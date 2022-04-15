@@ -26,8 +26,8 @@ app.use(authRoutes);
 app.use(regFormRoutes);
 app.use(schemaRoutes);
 app.use(configsRoutes);
-app.use("/admin", adminAuthRoutes);
-app.use("/admin/tournaments", tournamentRoutes);
+app.use(adminAuthRoutes);
+app.use(tournamentRoutes);
 // quick checkup route
 app.get("/", (req, res) => {
   res.send({ message: "App is running fine" });

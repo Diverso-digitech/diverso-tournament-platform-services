@@ -1,4 +1,4 @@
-import { API } from "../constants/apiConstants.js";
+import { API, ADMIN_APIS } from "../constants/apiConstants.js";
 import { formatResponse } from "../utils/common.js";
 
 function getAppConfig(req, res) {
@@ -19,7 +19,7 @@ function getEndpointsConfig(req, res) {
     res,
     200,
     {
-      endpoints: API,
+      endpoints: { ...API, ...ADMIN_APIS },
     },
     false
   );

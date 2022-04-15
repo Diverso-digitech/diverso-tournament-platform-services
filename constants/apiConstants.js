@@ -11,8 +11,8 @@ export const API = {
 };
 
 export const ADMIN_APIS = {
-  SIGNUP: "/signup",
-  LOGIN: "/login",
-  LOGOUT: "/logout",
+  ADMIN_SIGNUP: "/admin-signup",
+  ADMIN_LOGIN: "/admin-login",
+  ADMIN_LOGOUT: "/admin-logout",
   CREATE_TOURNAMENT: "/create-tournament",
 };
