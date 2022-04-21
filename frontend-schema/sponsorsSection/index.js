@@ -1,7 +1,7 @@
-import { sponsorsSectiondefaultItems } from "./sponsersSectionConstant.js";
+import { tournamentInfodefaultItems } from "./tournamentInfoConstant.js";
 
 
-export const sponsorsSectionSchemaGenerator = (items) => {
+export const tournamentInfoSchemaGenerator = (items) => {
   return {
     schema: {
       sections: items.map(({ data, props, isLive, overLayProps }) => ({
@@ -14,7 +14,7 @@ export const sponsorsSectionSchemaGenerator = (items) => {
   };
 };
 
-export const sponsorsSectionSchema = (req, res) => {
+export const tournamentInfoSchema = (req, res) => {
   res.json({
     data: {},
     meta: {
@@ -22,6 +22,6 @@ export const sponsorsSectionSchema = (req, res) => {
       error: false,
       messageID: 1,
     },
-    schema: sponsorsSectionSchemaGenerator(sponsorsSectiondefaultItems),
+    schema: sponsorsSectionSchemaGenerator(tournamentInfodefaultItems),
   });
 };

@@ -397,7 +397,7 @@ const tournamentsPageSwiperProperties = {
             grabCursor: true,
             navigation: true,
             className: "mySwiper",
-            modules: ["EffectFade", "Navigation"],
+            modulesSupported: ["EffectFade", "Navigation"],
             breakpoints: {
               640: {
                 slidesPerView: 1.15,
@@ -424,7 +424,7 @@ const tournamentsPageSwiperProperties = {
             slidesPerGroupSkip: 2,
             grabCursor: true,
             navigation: true,
-            modules: ["EffectFade", "Navigation"],
+            modulesSupported: ["EffectFade", "Navigation"],
             className: "mySwiper",
             breakpoints: {
               360: {
@@ -445,6 +445,6 @@ const tournamentsPageSwiperProperties = {
 }
 
 export const tournamentsPageDefaultItems = [
-    {id:"forHero  Swiper", type:"SWIPER", data: tournamentsData.heroSwiperData.data,  props: tournamentsPageSwiperProperties.heroSwiperProps},
+    {id:"forHeroSwiper", type:"SWIPER", data: tournamentsData.heroSwiperData.data,  props: tournamentsPageSwiperProperties.heroSwiperProps},
     {id:"forOtherSwiper", type:"SWIPER", data: tournamentsData.otherSwiperData.data, props: tournamentsPageSwiperProperties.otherSwiperProps}
 ]
