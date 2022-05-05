@@ -89,6 +89,6 @@ const sponsorsSectionSwiperProps = {
 }
 
 
-export const sponsorsSectiondefaultItems = [
+export const tournamentInfodefaultItems = [
     {data: tournamentData.data, props: sponsorsSectionSwiperProps.swiperPropsSponsors, isLive: tournamentData.isLive, overLayProps:tournamentData.overLayProps }
 ]
