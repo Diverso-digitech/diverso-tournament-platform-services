@@ -1,4 +1,4 @@
-import { Tournament } from "../../models/admin/Tournament";
+import { Tournament } from "../../models/admin/Tournament.js";
 
 async function createTournament(req, res) {
   const { tournamentName, numberOfPlayers } = req.body;
