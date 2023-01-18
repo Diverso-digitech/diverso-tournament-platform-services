@@ -5,6 +5,8 @@ export const MESSAGES = {
   REQUIRED_DATA: "REQUIRED DATA",
   TOKEN_EXPIRED: "TOKEN EXPIRED",
   NO_FIREBASE_TOKEN_FOUND: "NO FIREBASE TOKEN FOUND",
+  EMAIL_OR_PHONE_ALREADY_USED: "Email or Phone already in use.",
+  WRONG_EMAIL_OR_PASSWORD: "Wrong email or password",
 };
 
 export const NAMES = {
