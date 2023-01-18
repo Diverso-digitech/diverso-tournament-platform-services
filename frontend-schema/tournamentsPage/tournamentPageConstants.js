@@ -22,7 +22,7 @@ const tournamentsData = {
                 bottomLeft: [
                   {
                     id:"one",
-                    title: "Live jksdfg gjsdfg s;dgf 'sfkg'"
+                    title: "Battlegrounds Mobile India is the Indian version of PUBG Mobile, exclusively for players in India. It is an online multiplayer battle royale game developed and published by Krafton. Battlegrounds Mobile India is the Indian version of PUBG Mobile, exclusively for players in India. It is an online multiplayer battle royale game developed and published by Krafton."
                   }
             
                 ],
@@ -446,5 +446,6 @@ const tournamentsPageSwiperProperties = {
 
 export const tournamentsPageDefaultItems = [
     {id:"forHeroSwiper", type:"SWIPER", data: tournamentsData.heroSwiperData.data,  props: tournamentsPageSwiperProperties.heroSwiperProps},
-    {id:"forOtherSwiper", type:"SWIPER", data: tournamentsData.otherSwiperData.data, props: tournamentsPageSwiperProperties.otherSwiperProps}
+    {id:"forOtherSwiper", heading: "National", type:"SWIPER", data: tournamentsData.otherSwiperData.data, props: tournamentsPageSwiperProperties.otherSwiperProps},
+    {id:"forOtherSwiper", heading: "Regional", type:"SWIPER", data: tournamentsData.otherSwiperData.data, props: tournamentsPageSwiperProperties.otherSwiperProps}
 ]
