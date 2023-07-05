@@ -1,2 +1,2 @@
-export const dbString = "mongodb+srv://sahil:sahilmalviya@cluster0.hhowf26.mongodb.net/shashankdbtest?retryWrites=true&w=majority";
+export const dbString = "mongodb+srv://root:changeme@diversocluster0.yjhilmg.mongodb.net/";
 export const AUTH_SECRET = "MY_AUTH_SECRET";
