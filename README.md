@@ -20,7 +20,9 @@ https://www.mongodb.com/docs/manual/administration/install-community/
 
 Install mongoDB compass
 ```
-https://downloads.mongodb.com/compass/mongodb-compass-1.32.2-darwin-x64.dmg
+https://www.mongodb.com/try/download/compass
+
+mac: https://downloads.mongodb.com/compass/mongodb-compass-1.32.2-darwin-x64.dmg
 ```
 
 Your app should now be running on [localhost:8000](http://localhost:8000/).

@@ -132,6 +132,7 @@ const homepageData = {
 
 export const defaultItems = [
   {id: "forChipSection", heading: "", type: homepageItemTypes.CHIP, props: homepageProperties.swiperChips, data: homepageData.data },
-  {id: "forSwiperSection", heading: "Trending Games", type: homepageItemTypes.SWIPER, props: homepageProperties.swiper, data: homepageData.data},
-  {id: "forSwiperSection", heading: "Trending Games", type: homepageItemTypes.SWIPER, props: homepageProperties.swiper, data: homepageData.data},
+  {id: "forSwiperSection", heading: "Trending", type: homepageItemTypes.SWIPER, props: homepageProperties.swiper, data: homepageData.data},
+  {id: "forSwiperSection", heading: "Most Played", type: homepageItemTypes.SWIPER, props: homepageProperties.swiper, data: homepageData.data},
+  {id: "forSwiperSection", heading: "Regional", type: homepageItemTypes.SWIPER, props: homepageProperties.swiper, data: homepageData.data},
 ];
