@@ -6,6 +6,9 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import regFormRoutes from "./routes/reg-form.js";
 import schemaRoutes from "./routes/schema.js";
+import configsRoutes from "./routes/configs.js";
+import adminAuthRoutes from "./routes/admin/admin-auth.js";
+import tournamentRoutes from "./routes/admin/manage-tournaments.js";
 
 const corsOptions = {
   origin: true,
@@ -22,7 +25,9 @@ app.use(express.json()); // support json encoded bodies
 app.use(authRoutes);
 app.use(regFormRoutes);
 app.use(schemaRoutes);
-
+app.use(configsRoutes);
+app.use(adminAuthRoutes);
+app.use(tournamentRoutes);
 // quick checkup route
 app.get("/", (req, res) => {
   res.send({ message: "App is running fine" });

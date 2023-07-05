@@ -62,56 +62,67 @@ const homepageProperties = {
 const homepageData = {
   data: [
     {
+      id: "1",
       gameName: "Bgmi",
       sampleImage: "../../assets/images/bgmiLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "2",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "3",
       gameName: "Bgmi",
       sampleImage: "../../assets/images/bgmiLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "4",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "5",
       gameName: "Bgmi",
       sampleImage: "../../assets/images/bgmiLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "6",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "7",
       gameName: "Bgmi",
       sampleImage: "../../assets/images/bgmiLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "8",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "9",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "10",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
     },
     {
+      id: "11",
       gameName: "Freefire",
       sampleImage: "../../assets/images/freeFireLogo.webp",
       buttonName: "See Tournament...",
