@@ -10,16 +10,14 @@ import configsRoutes from "./routes/configs.js";
 import adminAuthRoutes from "./routes/admin/admin-auth.js";
 import tournamentRoutes from "./routes/admin/manage-tournaments.js";
 
-// const corsOptions = {
-//   origin: true,
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: '*'
+};
 
 const app = express();
 
 app.use(cookieParser());
-// app.use(cors(corsOptions));
-app.options('*', cors()) 
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.json()); // support json encoded bodies
 
